@@ -5,7 +5,7 @@
 FROM quay.io/wunder/fuzzy-alpine-base:v3.6
 MAINTAINER james.nesbitt@wunder.io
 
-RUN apk --update add php7-xdebug && \
+RUN apk --no-cache --update add nginx && \
     # Cleanup
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
